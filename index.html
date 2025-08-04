@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WoodLang – Code Your Craft</title>
+  <style>
+    body {
+      font-family: monospace;
+      background: #f4f1ed;
+      color: #2b2b2b;
+      max-width: 800px;
+      margin: 4rem auto;
+      padding: 2rem;
+      line-height: 1.6;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    h2 {
+      margin-top: 2.5rem;
+      font-size: 1.5rem;
+    }
+    pre {
+      background: #222;
+      color: #f8f8f2;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+    code {
+      font-family: monospace;
+    }
+    a {
+      color: #005577;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    ul {
+      padding-left: 1.5rem;
+    }
+    footer {
+      margin-top: 4rem;
+      font-size: 0.85rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <h1>🪵 WoodLang</h1>
+  <p><strong>WoodLang</strong> is an experimental programming language for woodworking. It lets you design joinery, generate cut lists, and share build logic using simple, readable code—no CAD skills required.</p>
+
+  <h2>🔧 Syntax Example</h2>
+  <pre><code>units imperial  # supports 'metric' or 'imperial'
+
+material oak thickness:3/4"
+part leg = cut 1.5" x 1.5" x 28"
+part rail = cut 38mm x 400mm  # mixed units are allowed
+
+assembly table {
+  join leg, rail at 90° with pocket_screws
+}</code></pre>
+
+  <h2>✨ Features</h2>
+  <ul>
+    <li>Define parts and joinery in plain text</li>
+    <li>Support for <strong>imperial, metric, or mixed units</strong></li>
+    <li>Export to <em>cut lists</em>, <em>CAD-ready files</em>, or <em>assembly instructions</em></li>
+    <li>Human-readable, version-controlled, and shareable by default</li>
+    <li>In development: rendering engine and Fusion/OpenSCAD integration</li>
+  </ul>
+
+  <h2>🌍 Unit Handling</h2>
+  <p>WoodLang recognizes common imperial and metric units and converts all internal measurements automatically. You can:</p>
+  <ul>
+    <li>Set a default unit system: <code>units imperial</code> or <code>units metric</code></li>
+    <li>Override units inline (e.g. <code>400mm</code> or <code>24"</code>)</li>
+    <li>Export cut lists in either format with conversion handled automatically</li>
+  </ul>
+
+  <h2>🚧 Project Status</h2>
+  <p>This project is in active prototype development. The language parser and cut list generator are underway. Follow progress or contribute on <a href="https://github.com/yourusername/woodlang" target="_blank">GitHub</a>.</p>
+
+  <footer>
+    Built by a carpenter turned computer scientist. MIT Licensed. © 2025
+  </footer>
+</body>
+</html>
